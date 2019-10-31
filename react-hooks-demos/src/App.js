@@ -13,14 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <CounterClass />
-        <CounterHooks />
-        <Toggler />
-        <SimpleFormClass />
-        <SimpleFormHooks />
-        <SimpleFormInputHook />
-        <Clicker />
-        <SWMovies />
+        
       </div>
     );
   }
