@@ -1,20 +1,9 @@
-import React, { Component } from "react";
-import CounterClass from "./CounterClass";
-import CounterHooks from "./CounterHooks";
-import SimpleFormClass from "./SimpleFormClass";
-import SimpleFormHooks from "./SimpleFormHooks";
-import SimpleFormInputHook from "./SimpleFormInputHook";
-import Toggler from "./Toggler";
-import Clicker from "./Clicker";
-import SWMovies from "./SWMovies";
+import React from "react";
+import TodoApp from './TodoApp'
 import "./App.css";
 
 const app = props => {
-  return (
-    <div className='App'>
-
-    </div>
-  );
+  return <TodoApp/>
 }
 
 export default app;
