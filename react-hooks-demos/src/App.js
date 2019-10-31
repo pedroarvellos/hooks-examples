@@ -9,14 +9,12 @@ import Clicker from "./Clicker";
 import SWMovies from "./SWMovies";
 import "./App.css";
 
-class App extends Component {
-  render() {
-    return (
-      <div className='App'>
-        
-      </div>
-    );
-  }
+const app = props => {
+  return (
+    <div className='App'>
+
+    </div>
+  );
 }
 
-export default App;
+export default app;
