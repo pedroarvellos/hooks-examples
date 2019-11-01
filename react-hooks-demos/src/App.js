@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import TodoApp from './TodoApp'
-import Paper from '@material-ui/core/Paper'
+import TodoList from './TodoList'
 import './App.css';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Paper } from '@material-ui/core';
 
 const app = props => {
   const [todos, setTodos] = useState([
@@ -38,9 +38,7 @@ const app = props => {
           <Typography color='inherit'>TODOS WITH HOOKS</Typography>
         </Toolbar>
       </AppBar>
-      {/* <TodoList todos={todos}>
-
-      </TodoList> */}
+      <TodoList todos={todos}/>
     </Paper>
   )
 }
