@@ -24,7 +24,7 @@ const app = props => {
   ])
 
   const addTodo = newTodoText => {
-    setTodos([...todos, {id: 4, task: newTodoText, completed: false}])
+    setTodos([...todos, { id: 4, task: newTodoText, completed: false }])
   }
 
   return (
@@ -42,8 +42,12 @@ const app = props => {
           <Typography color='inherit'>TODOS WITH HOOKS</Typography>
         </Toolbar>
       </AppBar>
-      <TodoForm addTodo={addTodo}/>
-      <TodoList todos={todos}/>
+      <Grid container>
+        <Gird item xs={11} md={8} lg={4}>
+          <TodoForm addTodo={addTodo}/>
+          <TodoList todos={todos} />
+        </Gird>
+      </Grid>
     </Paper>
   )
 }
