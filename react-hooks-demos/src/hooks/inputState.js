@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { reset } from 'ansi-colors'
 
 export default initialValue => {
     const [value, setValue] = useState(initialValue)
