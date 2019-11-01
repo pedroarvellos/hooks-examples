@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TodoList from './TodoList'
 import TodoForm from './TodoForm'
 import './App.css';
-import { AppBar, Toolbar, Typography, Paper } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Paper, Grid } from '@material-ui/core';
 
 const app = props => {
   const [todos, setTodos] = useState([
@@ -42,11 +42,11 @@ const app = props => {
           <Typography color='inherit'>TODOS WITH HOOKS</Typography>
         </Toolbar>
       </AppBar>
-      <Grid container>
-        <Gird item xs={11} md={8} lg={4}>
+      <Grid container justify='center' style={{marginTop: '1rem'}}>
+        <Grid item xs={11} md={8} lg={4}>
           <TodoForm addTodo={addTodo}/>
           <TodoList todos={todos} />
-        </Gird>
+        </Grid>
       </Grid>
     </Paper>
   )
