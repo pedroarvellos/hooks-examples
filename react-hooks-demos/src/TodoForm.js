@@ -1,6 +1,6 @@
 import React from 'react'
 import { Paper, TextField } from '@material-ui/core'
-import useInputState from './hooks/inputState'
+import useInputState from './hooks/useInputState'
 
 const todoForm = ({ addTodo }) => {
     const [value, handleChange, reset] = useInputState('')
