@@ -1,16 +1,23 @@
 import React from 'react'
-import { Paper, List, ListItem, ListItemText, Divider } from '@material-ui/core'
+import { Paper, List, Divider } from '@material-ui/core'
+import Todo from './Todo'
 
-const todoList = props => {
+const todoList = ({ todos, removeTodo, toggleTodo, editTodo }) => {
     return (
         <Paper>
             <List>
-                {props.todos.map(todo => (
+                {todos.map(todo => (
                     <>
-                        <ListItem>
-                            <ListItemText>{todo.task}</ListItemText>
-                        </ListItem>
-                        <Divider/>
+                        <Todo
+                            id={todo.id}
+                            task={todo.task}
+                            key={todo.key}
+                            completed={todo.completed}
+                            removeTodo={removeTodo}
+                            toggleTodo={toggleTodo}
+                            editTodo={editTodo}
+                        />
+                        <Divider />
                     </>
                 ))}
             </List>
