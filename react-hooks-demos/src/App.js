@@ -7,23 +7,7 @@ import uuid from 'uuid/v4'
 
 const app = props => {
   const initialTodos = JSON.parse(window.localStorage.getItem('todos') || [])
-  // initialTodos = [
-  //   {
-  //     id: 1,
-  //     task: 'Clean Fishtank',
-  //     completed: false
-  //   },
-  //   {
-  //     id: 2,
-  //     task: 'Wash the car',
-  //     completed: true
-  //   },
-  //   {
-  //     id: 3,
-  //     task: 'Grow Beard',
-  //     completed: 'false'
-  //   }
-  // ]
+
   const [todos, setTodos] = useState(initialTodos)
 
   useEffect(() => {
