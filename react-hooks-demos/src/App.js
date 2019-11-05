@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import useTodoState from './hooks/useTodoState'
 import TodoList from './TodoList'
 import TodoForm from './TodoForm'
 import './App.css';
 import { AppBar, Toolbar, Typography, Paper, Grid } from '@material-ui/core';
-import uuid from 'uuid/v4'
 
 const app = props => {
   const initialTodos = JSON.parse(window.localStorage.getItem('todos') || [])
 
-  const [todos, setTodos] = useState(initialTodos)
+  const { todos, addTodo, removeTodo, toggleTodo, editTodo } = useTodoState(initialTodos)
 
   useEffect(() => {
     window.localStorage.setItem('todos', JSON.stringify(todos))
