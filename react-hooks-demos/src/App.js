@@ -6,7 +6,7 @@ import './App.css';
 import { AppBar, Toolbar, Typography, Paper, Grid } from '@material-ui/core';
 
 const app = () => {
-  const initialTodos = JSON.parse(window.localStorage.getItem('todos') || [])
+  const initialTodos = [{ id: 1, task: 'Pet a Monkey', completed: false }]
 
   const { todos, addTodo, removeTodo, toggleTodo, editTodo } = useTodoState(initialTodos)
 
