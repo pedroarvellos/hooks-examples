@@ -5,7 +5,7 @@ import TodoForm from './TodoForm'
 import './App.css';
 import { AppBar, Toolbar, Typography, Paper, Grid } from '@material-ui/core';
 
-const app = props => {
+const app = () => {
   const initialTodos = JSON.parse(window.localStorage.getItem('todos') || [])
 
   const { todos, addTodo, removeTodo, toggleTodo, editTodo } = useTodoState(initialTodos)
