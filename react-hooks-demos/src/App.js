@@ -10,6 +10,11 @@ const app = () => {
 
   const { todos, addTodo, removeTodo, toggleTodo, editTodo, setSimulation } = useTodoState(initialTodos)
 
+  const onRemove = (id) => {
+    removeTodo(id)
+    setSimulation('Value Updated')
+  }
+
   return (
     <Paper
       style={{
@@ -30,7 +35,8 @@ const app = () => {
           <TodoForm addTodo={addTodo} />
           <TodoList
             todos={todos}
-            removeTodo={removeTodo}
+            // removeTodo={removeTodo}
+            removeTodo={onRemove}
             toggleTodo={toggleTodo}
             editTodo={editTodo}
           />

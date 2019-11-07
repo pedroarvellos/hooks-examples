@@ -5,8 +5,14 @@ import uuid from 'uuid/v4'
 export default initialTodos => {
     const [todos, setTodos] = useLocalStorageState('todos', initialTodos)
     const [simulation, setSimulation] = useState('Value')
+
+    const check = () => {
+        console.log(simulation)
+    }
+
     return {
         todos,
+        check,
         setSimulation,
         addTodo: newTodoText => {
             setTodos([...todos, { id: uuid(), task: newTodoText, completed: false }])
