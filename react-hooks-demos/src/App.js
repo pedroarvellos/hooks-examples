@@ -37,7 +37,8 @@ const app = () => {
       </AppBar>
       <Grid container justify='center' style={{ marginTop: '1rem' }}>
         <Grid item xs={11} md={8} lg={4}>
-          <TodoForm addTodo={addTodo} />
+          {/* <TodoForm addTodo={addTodo} /> */}
+          <TodoForm addTodo={onAdd} />
           <TodoList
             todos={todos}
             // removeTodo={removeTodo}

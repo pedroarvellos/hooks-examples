@@ -1,10 +1,14 @@
-import {useState} from 'React'
+import { useState, useEffect } from 'React'
 import useLocalStorageState from './useLocalStorageState'
 import uuid from 'uuid/v4'
 
 export default initialTodos => {
     const [todos, setTodos] = useLocalStorageState('todos', initialTodos)
     const [simulation, setSimulation] = useState('Value')
+
+    useEffect(() => {
+        console.log(simulation)
+    }, [simulation])
 
     const check = () => {
         console.log(simulation)
