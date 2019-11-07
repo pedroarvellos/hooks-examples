@@ -8,18 +8,7 @@ import { AppBar, Toolbar, Typography, Paper, Grid } from '@material-ui/core';
 const app = () => {
   const initialTodos = [{ id: 1, task: 'Pet a Monkey', completed: false }]
 
-  const { todos, addTodo, removeTodo, toggleTodo, editTodo, setSimulation, check } = useTodoState(initialTodos)
-
-  const onRemove = (id) => {
-    removeTodo(id)
-    setSimulation('Value Updated')
-  }
-
-  const onAdd = (todo) => {
-    addTodo(todo)
-    check()
-  }
-
+  const { todos, addTodo, removeTodo, toggleTodo, editTodo } = useTodoState(initialTodos)
   return (
     <Paper
       style={{
@@ -37,12 +26,10 @@ const app = () => {
       </AppBar>
       <Grid container justify='center' style={{ marginTop: '1rem' }}>
         <Grid item xs={11} md={8} lg={4}>
-          {/* <TodoForm addTodo={addTodo} /> */}
-          <TodoForm addTodo={onAdd} />
+          <TodoForm addTodo={addTodo} />
           <TodoList
             todos={todos}
-            // removeTodo={removeTodo}
-            removeTodo={onRemove}
+            removeTodo={removeTodo}
             toggleTodo={toggleTodo}
             editTodo={editTodo}
           />

@@ -1,23 +1,12 @@
-import { useState, useEffect } from 'React'
+import { useState, useEffect } from 'react'
 import useLocalStorageState from './useLocalStorageState'
 import uuid from 'uuid/v4'
 
 export default initialTodos => {
     const [todos, setTodos] = useLocalStorageState('todos', initialTodos)
-    const [simulation, setSimulation] = useState('Value')
-
-    useEffect(() => {
-        console.log(simulation)
-    }, [simulation])
-
-    const check = () => {
-        console.log(simulation)
-    }
 
     return {
         todos,
-        check,
-        setSimulation,
         addTodo: newTodoText => {
             setTodos([...todos, { id: uuid(), task: newTodoText, completed: false }])
         },
