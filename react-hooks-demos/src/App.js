@@ -8,11 +8,16 @@ import { AppBar, Toolbar, Typography, Paper, Grid } from '@material-ui/core';
 const app = () => {
   const initialTodos = [{ id: 1, task: 'Pet a Monkey', completed: false }]
 
-  const { todos, addTodo, removeTodo, toggleTodo, editTodo, setSimulation } = useTodoState(initialTodos)
+  const { todos, addTodo, removeTodo, toggleTodo, editTodo, setSimulation, check } = useTodoState(initialTodos)
 
   const onRemove = (id) => {
     removeTodo(id)
     setSimulation('Value Updated')
+  }
+
+  const onAdd = (todo) => {
+    addTodo(todo)
+    check()
   }
 
   return (
